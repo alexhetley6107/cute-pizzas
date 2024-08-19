@@ -6,3 +6,5 @@ export { SortPopup } from './sort-popup';
 export { FilterCheckbox } from './filter-checkbox';
 export { CheckboxFiltersGroup } from './check-filter-groups';
 export { Filters } from './filters';
+export { ProductCard } from './product-card';
+export { ProductsGroupList } from './products-group-list';
