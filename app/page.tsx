@@ -23,9 +23,6 @@ export default function Home() {
 
       <Container className="mt-10 pb-14">
         <div className="flex gap-[80px]">
-          <div className="w-[250px]">
-            <Filters />
-          </div>
           <div className="flex-1">
             <div className="flex flex-col gap-16">
               <ProductsGroupList
@@ -39,42 +36,42 @@ export default function Home() {
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 2,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 3,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 4,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 5,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 6,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                 ]}
-                categoryId={0}
+                categoryId={1}
               />
               <ProductsGroupList
                 title="Завтрак"
@@ -87,42 +84,42 @@ export default function Home() {
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 2,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 3,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 4,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 5,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                   {
-                    id: 1,
+                    id: 6,
                     name: '',
                     imageUrl:
                       'https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp',
                     price: 390,
                   },
                 ]}
-                categoryId={0}
+                categoryId={2}
               />
             </div>
 
@@ -130,6 +127,10 @@ export default function Home() {
               {/* <Pagination pageCount={3} /> */}
               <span className="text-sm text-gray-400">5 из 65</span>
             </div>
+          </div>
+
+          <div className="w-[250px]">
+            <Filters />
           </div>
         </div>
       </Container>

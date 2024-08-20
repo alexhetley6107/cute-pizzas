@@ -38,8 +38,8 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
 
   const list = showAll
     ? items.filter((item) => item.text.toLowerCase().includes(searchValue.toLocaleLowerCase()))
-    : // : defaultItems || items;
-      [];
+    : defaultItems || items;
+
   // const [selected, { add, toggle }] = useSet<string>(new Set([]));
 
   // const onCheckedChange = (value: string) => {
