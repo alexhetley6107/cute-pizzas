@@ -36,7 +36,7 @@ export const ProductsGroupList: React.FC<Props> = ({ title, items, className, ca
             id={item.id}
             key={item.id}
             name="Маргарита"
-            imageUrl="https://media.dodostatic.net/image/r:292x292/11EE7D610BBEB562BD4D48786AD87270.webp"
+            imageUrl="./images/pizzas/pizza_1.webp"
             price={390}
             count={i % 2}
           />
