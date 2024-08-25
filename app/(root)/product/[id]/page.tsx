@@ -1,4 +1,4 @@
-import { Container, PizzaImage } from '@/components/shared';
+import { Container, PizzaImage } from '@/shared/components/shared';
 import { prisma } from '@/prisma/prisma-client';
 import { notFound } from 'next/navigation';
 
@@ -7,15 +7,6 @@ export default async function ProductPage({ params: { id } }: { params: { id: st
     where: { id: Number(id) },
     include: {
       ingredients: true,
-      // category: {
-      //   include: {
-      //     products: {
-      //       include: {
-      //         items: true,
-      //       },
-      //     },
-      //   },
-      // },
       items: true,
     },
   });

@@ -1,4 +1,4 @@
-import { ChooseProductModal, Container, PizzaImage } from '@/components/shared';
+import { ChooseProductModal, Container, PizzaImage } from '@/shared/components/shared';
 import { prisma } from '@/prisma/prisma-client';
 import { notFound } from 'next/navigation';
 
