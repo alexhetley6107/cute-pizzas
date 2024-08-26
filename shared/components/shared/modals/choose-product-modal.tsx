@@ -17,8 +17,8 @@ interface Props {
 
 export const ChooseProductModal: React.FC<Props> = ({ product, className }) => {
   const router = useRouter();
-  const firstItem = product.items[0];
-  const isPizzaForm = Boolean(firstItem.pizzaType);
+  // const firstItem = product.items[0];
+  // const isPizzaForm = Boolean(firstItem.pizzaType);
 
   return (
     <Dialog open={Boolean(product)} onOpenChange={() => router.back()}>

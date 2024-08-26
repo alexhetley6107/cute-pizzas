@@ -2,16 +2,15 @@
 
 import React from 'react';
 import { Ingredient, ProductItem } from '@prisma/client';
-
 import { PizzaImage } from './pizza-image';
 import { Title } from './title';
 import { Button } from '../ui';
 import { GroupVariants } from './group-variants';
-// import { PizzaSize, PizzaType, pizzaTypes } from '@/constants/pizza';
-// import { IngredientItem } from './ingredient-item';
+import { PizzaSize, PizzaType, pizzaTypes } from '@/shared/constants/pizza';
 import { cn } from '@/shared/lib/utils';
-// import { getPizzaDetails } from '@/lib';
-// import { usePizzaOptions } from '@/hooks';
+import { IngredientItem } from './ingredient-item';
+import { usePizzaOptions } from '@/shared/hooks';
+import { getPizzaDetails } from '@/shared/lib';
 
 interface Props {
   imageUrl: string;
@@ -32,30 +31,29 @@ export const ChoosePizzaForm: React.FC<Props> = ({
   onSubmit,
   className,
 }) => {
-  // const {
-  //   size,
-  //   type,
-  //   selectedIngredients,
-  //   availableSizes,
-  //   currentItemId,
-  //   setSize,
-  //   setType,
-  //   addIngredient,
-  // } = usePizzaOptions(items);
-  const size = 30;
-  const totalPrice = 340;
-  // const { totalPrice, textDetaills } = getPizzaDetails(
-  //   type,
-  //   size,
-  //   items,
-  //   ingredients,
-  //   selectedIngredients
-  // );
+  const {
+    size,
+    type,
+    selectedIngredients,
+    availableSizes,
+    currentItemId,
+    setSize,
+    setType,
+    addIngredient,
+  } = usePizzaOptions(items);
+
+  const { totalPrice, textDetails } = getPizzaDetails(
+    type,
+    size,
+    items,
+    ingredients,
+    selectedIngredients
+  );
 
   const handleClickAdd = () => {
-    // if (currentItemId) {
-    //   onSubmit(currentItemId, Array.from(selectedIngredients));
-    // }
+    if (currentItemId) {
+      onSubmit(currentItemId, Array.from(selectedIngredients));
+    }
   };
 
   return (
@@ -65,10 +63,10 @@ export const ChoosePizzaForm: React.FC<Props> = ({
       <div className="w-[490px] bg-[#f7f6f5] p-7">
         <Title text={name} size="md" className="font-extrabold mb-1" />
 
-        <p className="text-gray-400">{'textDetaills'}</p>
+        <p className="text-gray-400">{textDetails}</p>
 
         <div className="flex flex-col gap-4 mt-5">
-          {/* <GroupVariants
+          <GroupVariants
             items={availableSizes}
             value={String(size)}
             onClick={(value) => setSize(Number(value) as PizzaSize)}
@@ -78,12 +76,12 @@ export const ChoosePizzaForm: React.FC<Props> = ({
             items={pizzaTypes}
             value={String(type)}
             onClick={(value) => setType(Number(value) as PizzaType)}
-          /> */}
+          />
         </div>
 
         <div className="bg-gray-50 p-5 rounded-md h-[420px] overflow-auto scrollbar mt-5">
           <div className="grid grid-cols-3 gap-3">
-            {/* {ingredients.map((ingredient) => (
+            {ingredients.map((ingredient) => (
               <IngredientItem
                 key={ingredient.id}
                 name={ingredient.name}
@@ -92,7 +90,7 @@ export const ChoosePizzaForm: React.FC<Props> = ({
                 onClick={() => addIngredient(ingredient.id)}
                 active={selectedIngredients.has(ingredient.id)}
               />
-            ))} */}
+            ))}
           </div>
         </div>
 
