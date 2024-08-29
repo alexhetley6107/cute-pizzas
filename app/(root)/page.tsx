@@ -26,7 +26,7 @@ export default async function Home() {
         <Title text="Все пиццы" size="lg" className="font-extrabold" />
       </Container>
 
-      <div className="sticky top-0 bg-white py-5 shadow-lg shadow-black/5">
+      <div className="sticky z-10 top-0 bg-white py-5 shadow-lg shadow-black/5">
         <Container className="flex items-center justify-between ">
           <Categories items={categories.filter((c) => c.products.length > 0)} />
           <SortPopup />

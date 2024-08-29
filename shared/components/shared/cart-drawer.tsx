@@ -29,7 +29,7 @@ export const CartDrawer: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   const onClickCountButton = (id: number, quantity: number, type: 'plus' | 'minus') => {
     const newQuantity = type === 'plus' ? quantity + 1 : quantity - 1;
-    // updateItemQuantity(id, newQuantity);
+    updateItemQuantity(id, newQuantity);
   };
 
   return (
