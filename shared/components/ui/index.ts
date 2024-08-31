@@ -8,3 +8,4 @@ export { Select } from './select';
 export { Slider } from './slider';
 export { RangeSlider } from './range-slider';
 export { Skeleton } from './skeleton';
+export { Textarea } from './textarea';
