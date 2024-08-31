@@ -3,9 +3,9 @@
 import React from 'react';
 import { WhiteBlock } from '../white-block';
 import { FormTextarea } from '../forms';
-// import { AddressInput } from '../address-input';
 import { Controller, useFormContext } from 'react-hook-form';
 import { ErrorText } from '../error-text';
+import { AddressInput } from './address-input';
 
 interface Props {
   className?: string;
@@ -22,7 +22,7 @@ export const CheckoutAddressForm: React.FC<Props> = ({ className }) => {
           name="address"
           render={({ field, fieldState }) => (
             <>
-              {/* <AdressInput onChange={field.onChange} /> */}
+              <AddressInput onChange={field.onChange} />
               {fieldState.error?.message && <ErrorText text={fieldState.error.message} />}
             </>
           )}
