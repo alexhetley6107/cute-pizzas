@@ -4,22 +4,20 @@ import { categories, _ingredients, products } from './constants';
 import { prisma } from './prisma-client';
 import { Prisma } from '@prisma/client';
 
-const randomNumber = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min) + min);
-};
-
 const generateProductItem = ({
   productId,
+  price,
   pizzaType,
   size,
 }: {
   productId: number;
+  price: number;
   pizzaType?: 1 | 2;
   size?: 20 | 30 | 40;
 }) => {
   return {
     productId,
-    price: randomNumber(190, 600),
+    price,
     pizzaType,
     size,
   } as Prisma.ProductItemUncheckedCreateInput;
@@ -85,41 +83,41 @@ async function up() {
   await prisma.productItem.createMany({
     data: [
       // Пицца "Пепперони фреш"
-      generateProductItem({ productId: pizza1.id, pizzaType: 1, size: 20 }),
-      generateProductItem({ productId: pizza1.id, pizzaType: 2, size: 30 }),
-      generateProductItem({ productId: pizza1.id, pizzaType: 2, size: 40 }),
+      generateProductItem({ productId: pizza1.id, price: 31, pizzaType: 1, size: 20 }),
+      generateProductItem({ productId: pizza1.id, price: 54, pizzaType: 2, size: 30 }),
+      generateProductItem({ productId: pizza1.id, price: 73, pizzaType: 2, size: 40 }),
 
       // Пицца "Сырная"
-      generateProductItem({ productId: pizza2.id, pizzaType: 1, size: 20 }),
-      generateProductItem({ productId: pizza2.id, pizzaType: 1, size: 30 }),
-      generateProductItem({ productId: pizza2.id, pizzaType: 1, size: 40 }),
-      generateProductItem({ productId: pizza2.id, pizzaType: 2, size: 20 }),
-      generateProductItem({ productId: pizza2.id, pizzaType: 2, size: 30 }),
-      generateProductItem({ productId: pizza2.id, pizzaType: 2, size: 40 }),
+      generateProductItem({ productId: pizza2.id, price: 28, pizzaType: 1, size: 20 }),
+      generateProductItem({ productId: pizza2.id, price: 45, pizzaType: 1, size: 30 }),
+      generateProductItem({ productId: pizza2.id, price: 59, pizzaType: 1, size: 40 }),
+      generateProductItem({ productId: pizza2.id, price: 41, pizzaType: 2, size: 20 }),
+      generateProductItem({ productId: pizza2.id, price: 63, pizzaType: 2, size: 30 }),
+      generateProductItem({ productId: pizza2.id, price: 78, pizzaType: 2, size: 40 }),
 
       // Пицца "Чоризо фреш"
-      generateProductItem({ productId: pizza3.id, pizzaType: 1, size: 20 }),
-      generateProductItem({ productId: pizza3.id, pizzaType: 2, size: 30 }),
-      generateProductItem({ productId: pizza3.id, pizzaType: 2, size: 40 }),
+      generateProductItem({ productId: pizza3.id, price: 42, pizzaType: 1, size: 20 }),
+      generateProductItem({ productId: pizza3.id, price: 64, pizzaType: 2, size: 30 }),
+      generateProductItem({ productId: pizza3.id, price: 83, pizzaType: 2, size: 40 }),
 
       // Остальные продукты
-      generateProductItem({ productId: 1 }),
-      generateProductItem({ productId: 2 }),
-      generateProductItem({ productId: 3 }),
-      generateProductItem({ productId: 4 }),
-      generateProductItem({ productId: 5 }),
-      generateProductItem({ productId: 6 }),
-      generateProductItem({ productId: 7 }),
-      generateProductItem({ productId: 8 }),
-      generateProductItem({ productId: 9 }),
-      generateProductItem({ productId: 10 }),
-      generateProductItem({ productId: 11 }),
-      generateProductItem({ productId: 12 }),
-      generateProductItem({ productId: 13 }),
-      generateProductItem({ productId: 14 }),
-      generateProductItem({ productId: 15 }),
-      generateProductItem({ productId: 16 }),
-      generateProductItem({ productId: 17 }),
+      generateProductItem({ productId: 1, price: 35 }),
+      generateProductItem({ productId: 2, price: 28 }),
+      generateProductItem({ productId: 3, price: 17 }),
+      generateProductItem({ productId: 4, price: 43 }),
+      generateProductItem({ productId: 5, price: 16 }),
+      generateProductItem({ productId: 6, price: 8 }),
+      generateProductItem({ productId: 7, price: 61 }),
+      generateProductItem({ productId: 8, price: 70 }),
+      generateProductItem({ productId: 9, price: 30 }),
+      generateProductItem({ productId: 10, price: 43 }),
+      generateProductItem({ productId: 11, price: 36 }),
+      generateProductItem({ productId: 12, price: 21 }),
+      generateProductItem({ productId: 13, price: 34 }),
+      generateProductItem({ productId: 14, price: 25 }),
+      generateProductItem({ productId: 15, price: 33 }),
+      generateProductItem({ productId: 16, price: 28 }),
+      generateProductItem({ productId: 17, price: 17 }),
     ],
   });
 
