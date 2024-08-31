@@ -18,8 +18,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.png" data-react-helmet="true" />
       </head>
-      <body className={nunito.variable}>{children}</body>
-      <Toaster />
+      <body className={nunito.variable}>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }
