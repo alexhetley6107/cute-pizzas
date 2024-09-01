@@ -1,4 +1,7 @@
+export * from './forms';
 export * from './modals';
+export * from './checkout';
+export * from './email-templates';
 export { Header } from './header';
 export { Container } from './container';
 export { Title } from './title';
@@ -25,7 +28,5 @@ export { ErrorText } from './error-text';
 export { RequiredSymbol } from './required-symbol';
 export { ClearButton } from './clear-button';
 export { ProfileButton } from './profile-button';
-export * from './forms';
-export * from './modals';
-export * from './checkout';
-export * from './email-templates';
+export { InfoBlock } from './info-block';
+export { ProfileForm } from './profile-form';
