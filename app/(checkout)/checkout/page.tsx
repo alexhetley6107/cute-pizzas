@@ -14,6 +14,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { checkoutFormSchema, CheckoutFormValues } from '@/shared/constants';
 import toast from 'react-hot-toast';
+import { createOrder } from '@/app/api/actions';
 
 export default function CheckoutPage() {
   const [submitting, setSubmitting] = React.useState(false);
@@ -37,7 +38,26 @@ export default function CheckoutPage() {
   };
 
   const onSubmit = async (data: CheckoutFormValues) => {
-    console.log(data);
+    try {
+      setSubmitting(true);
+
+      const url = await createOrder(data);
+
+      console.log({ url });
+
+      toast.error('Заказ успешно оформлен! 📝 Переход на оплату... ', {
+        icon: '✅',
+      });
+
+      if (url) {
+        location.href = url;
+      }
+    } catch (err) {
+      console.log(err);
+      toast.error('Не удалось создать заказ', { icon: '❌' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
