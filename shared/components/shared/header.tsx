@@ -9,6 +9,8 @@ import { SearchInput } from './search-input';
 import { CartButton } from './cart-button';
 import { ProfileButton } from './profile-button';
 import { AuthModal } from './modals';
+import { useRouter, useSearchParams } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 interface Props {
   hasSearch?: boolean;
@@ -17,7 +19,26 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, className }) => {
+  const router = useRouter();
   const [openAuthModal, setOpenAuthModal] = React.useState(false);
+
+  const searchParams = useSearchParams();
+
+  React.useEffect(() => {
+    let toastMessage = '';
+
+    if (searchParams.has('verified')) {
+      toastMessage = 'Почта успешно подтверждена!';
+    }
+
+    if (toastMessage) {
+      setTimeout(() => {
+        router.replace('/');
+        toast.success(toastMessage, { duration: 3000 });
+      }, 1000);
+    }
+  }, []);
+
   return (
     <header className={cn('border-b border-gray-100', className)}>
       <Container className="flex items-center justify-between py-8">

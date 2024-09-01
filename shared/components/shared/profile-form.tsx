@@ -10,8 +10,8 @@ import { signOut } from 'next-auth/react';
 import { Container } from './container';
 import { Title } from './title';
 import { Button } from '../ui';
-// import { updateUserInfo } from '@/app/actions';
 import { FormInput } from './forms';
+import { updateUserInfo } from '@/app/api/actions';
 
 interface Props {
   data: User;
@@ -30,11 +30,11 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
 
   const onSubmit = async (data: TFormRegisterValues) => {
     try {
-      // await updateUserInfo({
-      //   email: data.email,
-      //   fullName: data.fullName,
-      //   password: data.password,
-      // });
+      await updateUserInfo({
+        email: data.email,
+        fullName: data.fullName,
+        password: data.password,
+      });
 
       toast.error('Данные обновлены 📝', {
         icon: '✅',
