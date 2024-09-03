@@ -3,8 +3,8 @@
 import { prisma } from '@/prisma/prisma-client';
 import { PayOrderTemplate, VerificationUserTemplate } from '@/shared/components/shared';
 import { CheckoutFormValues } from '@/shared/constants';
-import { sendEmail } from '@/shared/lib';
 import { getUserSession } from '@/shared/lib/get-user-session';
+import { sendEmail } from '@/shared/lib/send-email';
 import { OrderStatus, Prisma } from '@prisma/client';
 import { hashSync } from 'bcrypt';
 import { cookies } from 'next/headers';
