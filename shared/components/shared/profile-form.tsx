@@ -61,8 +61,8 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
           <FormInput name="email" label="E-Mail" required />
           <FormInput name="fullName" label="Полное имя" required />
 
-          <FormInput type="password" name="password" label="Новый пароль" required />
-          <FormInput type="password" name="confirmPassword" label="Повторите пароль" required />
+          <FormInput type="password" name="password" label="Новый пароль" />
+          <FormInput type="password" name="confirmPassword" label="Повторите пароль" />
 
           <Button disabled={form.formState.isSubmitting} className="text-base mt-10" type="submit">
             Сохранить

@@ -33,7 +33,7 @@ export const AuthModal: React.FC<Props> = ({ open, onClose }) => {
         )}
 
         <hr />
-        <div className="flex gap-2">
+        <div className="flex justify-center">
           <Button
             variant="secondary"
             onClick={() =>
@@ -51,25 +51,6 @@ export const AuthModal: React.FC<Props> = ({ open, onClose }) => {
               alt="GitHub logo"
             />
             GitHub
-          </Button>
-
-          <Button
-            variant="secondary"
-            onClick={() =>
-              signIn('google', {
-                callbackUrl: '/',
-                redirect: true,
-              })
-            }
-            type="button"
-            className="gap-2 h-12 p-2 flex-1"
-          >
-            <img
-              className="w-6 h-6"
-              src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg"
-              alt="Google logo"
-            />
-            Google
           </Button>
         </div>
 
