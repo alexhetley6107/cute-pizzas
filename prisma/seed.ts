@@ -146,6 +146,54 @@ async function up() {
       },
     },
   });
+
+  await prisma.story.createMany({
+    data: [
+      {
+        previewImageUrl: '/images/stories/11.webp',
+      },
+      {
+        previewImageUrl: '/images/stories/12.webp',
+      },
+      {
+        previewImageUrl: '/images/stories/13.webp',
+      },
+      {
+        previewImageUrl: '/images/stories/14.webp',
+      },
+      {
+        previewImageUrl: '/images/stories/15.webp',
+      },
+      {
+        previewImageUrl: '/images/stories/16.webp',
+      },
+    ],
+  });
+
+  await prisma.storyItem.createMany({
+    data: [
+      {
+        storyId: 1,
+        sourceUrl: '/images/stories/101.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl: '/images/stories/102.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl: '/images/stories/103.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl: '/images/stories/104.webp',
+      },
+      {
+        storyId: 1,
+        sourceUrl: '/images/stories/105.webp',
+      },
+    ],
+  });
 }
 
 async function down() {

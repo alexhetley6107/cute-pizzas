@@ -9,6 +9,7 @@ import {
 import { prisma } from '@/prisma/prisma-client';
 import { Suspense } from 'react';
 import { findPizzas, GetSearchParams } from '@/shared/lib/find-pizzas';
+import { Stories } from '@/shared/components/shared/stories';
 
 export default async function Home({ searchParams }: { searchParams: GetSearchParams }) {
   const categories = await findPizzas(searchParams);
@@ -25,6 +26,8 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
           <SortPopup />
         </Container>
       </div>
+
+      <Stories />
 
       <Container className="mt-10 pb-14">
         <div className="flex gap-[80px]">
