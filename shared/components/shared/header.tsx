@@ -41,11 +41,11 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
 
   return (
     <header className={cn('border-b border-gray-100', className)}>
-      <Container className="flex items-center justify-between py-8">
+      <Container className="flex flex-wrap items-center justify-between py-4 md:py-8 px-4">
         <Link href="/">
           <div className="flex items-center gap-4">
             <Image src="/logo.png" width={35} height={35} alt="Logo" />
-            <div>
+            <div className="hidden md:block">
               <h1 className="text-2xl uppercase font-black">Cute Pizzas</h1>
               <p className="text-sm text-gray-400 leading-3">вкусней уже некуда</p>
             </div>
@@ -53,7 +53,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
         </Link>
 
         {hasSearch && (
-          <div className="mx-10 flex-1">
+          <div className="mx-10 flex-1 hidden sm:block">
             <SearchInput />
           </div>
         )}
