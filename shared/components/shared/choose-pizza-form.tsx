@@ -57,10 +57,10 @@ export const ChoosePizzaForm: React.FC<Props> = ({
   };
 
   return (
-    <div className={cn(className, 'flex flex-1')}>
+    <div className={cn(className, 'flex flex-1 flex-col lg:flex-row gap-5')}>
       <PizzaImage imageUrl={imageUrl} size={size} />
 
-      <div className="w-[490px] bg-[#f7f6f5] p-7">
+      <div className="w-full lg:w-[490px] bg-[#f7f6f5] p-7 rounded-[18px]">
         <Title text={name} size="md" className="font-extrabold mb-1" />
 
         <p className="text-gray-400">{textDetails}</p>
@@ -79,8 +79,8 @@ export const ChoosePizzaForm: React.FC<Props> = ({
           />
         </div>
 
-        <div className="bg-gray-50 p-5 rounded-md h-[420px] overflow-auto scrollbar mt-5">
-          <div className="grid grid-cols-3 gap-3">
+        <div className="bg-gray-50 p-0 sm:p-3 rounded-md h-auto lg:h-[420px] overflow-auto scrollbar mt-5">
+          <div className="flex flex-wrap gap-0 sm:gap-2 justify-center sm:justify-start">
             {ingredients.map((ingredient) => (
               <IngredientItem
                 key={ingredient.id}

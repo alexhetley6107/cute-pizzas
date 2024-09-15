@@ -79,7 +79,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <Container className="mt-2 md:mt-10 px-4">
+    <Container className="mt-2 md:mt-10 px-4 ">
       <Title
         text="Оформление заказа"
         className="font-extrabold mb-2 md:mb-8 text-[22px] md:text-[36px]"
