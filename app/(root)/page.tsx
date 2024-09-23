@@ -2,6 +2,7 @@ import {
   Categories,
   Container,
   Filters,
+  FiltersDrawer,
   ProductsGroupList,
   SortPopup,
   Title,
@@ -24,6 +25,9 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
         <Container className="flex flex-wrap items-center justify-between gap-2 px-4">
           <Categories items={categories.filter((c) => c.products.length > 0)} />
           <SortPopup />
+          <div className="md:hidden block">
+            <FiltersDrawer />
+          </div>
         </Container>
       </div>
 

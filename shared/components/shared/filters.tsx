@@ -15,12 +15,6 @@ interface PriceProps {
   priceTo?: number;
 }
 
-interface QueryFilters extends PriceProps {
-  pizzaTypes: string;
-  sizes: string;
-  ingredients: string;
-}
-
 export const Filters: React.FC<Props> = ({ className }) => {
   const filters = useFilters();
   useQueryFilters(filters);
