@@ -45,7 +45,7 @@ export default function CheckoutPage() {
 
       console.log({ url });
 
-      toast.error('Заказ успешно оформлен! 📝 Переход на оплату... ', {
+      toast.error('Order successfully placed! 📝 Proceed to payment... ', {
         icon: '✅',
       });
 
@@ -54,7 +54,7 @@ export default function CheckoutPage() {
       }
     } catch (err) {
       console.log(err);
-      toast.error('Не удалось создать заказ', { icon: '❌' });
+      toast.error('Failed to create order', { icon: '❌' });
     } finally {
       setSubmitting(false);
     }
@@ -63,7 +63,7 @@ export default function CheckoutPage() {
   return (
     <Container className="mt-2 md:mt-10 px-4 ">
       <Title
-        text="Оформление заказа"
+        text="Placing an order"
         className="font-extrabold mb-2 md:mb-8 text-[22px] md:text-[36px]"
       />
 

@@ -36,11 +36,11 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
         password: data.password,
       });
 
-      toast.error('Данные обновлены 📝', {
+      toast.error('Data updated 📝', {
         icon: '✅',
       });
     } catch (error) {
-      return toast.error('Ошибка при обновлении данных', {
+      return toast.error('Error updating data', {
         icon: '❌',
       });
     }
@@ -54,7 +54,7 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
 
   return (
     <Container className="py-10 px-4">
-      <Title text={`Личные данные | #${data.id}`} size="md" className="font-bold" />
+      <Title text={`Personal data | #${data.id}`} size="md" className="font-bold" />
 
       <FormProvider {...form}>
         <form
@@ -62,13 +62,13 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <FormInput name="email" label="E-Mail" required />
-          <FormInput name="fullName" label="Полное имя" required />
+          <FormInput name="fullName" label="Full Name" required />
 
-          <FormInput type="password" name="password" label="Новый пароль" />
-          <FormInput type="password" name="confirmPassword" label="Повторите пароль" />
+          <FormInput type="password" name="password" label="New password" />
+          <FormInput type="password" name="confirmPassword" label="Repeat password" />
 
           <Button disabled={form.formState.isSubmitting} className="text-base mt-10" type="submit">
-            Сохранить
+            Save
           </Button>
 
           <Button
@@ -78,7 +78,7 @@ export const ProfileForm: React.FC<Props> = ({ data }) => {
             className="text-base"
             type="button"
           >
-            Выйти
+            log out
           </Button>
         </form>
       </FormProvider>

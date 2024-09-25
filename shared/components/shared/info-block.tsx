@@ -13,9 +13,14 @@ interface Props {
 
 export const InfoBlock: React.FC<Props> = ({ className, title, text, imageUrl }) => {
   return (
-    <div className={cn(className, 'flex items-center justify-between w-[840px] gap-12')}>
+    <div
+      className={cn(
+        className,
+        'flex items-center flex-wrap-reverse justify-center md:justify-between w-full md:w-[840px] gap-12 px-4'
+      )}
+    >
       <div className="flex flex-col">
-        <div className="w-[445px]">
+        <div className="w-full md:w-[445px]">
           <Title size="lg" text={title} className="font-extrabold" />
           <p className="text-gray-400 text-lg">{text}</p>
         </div>
@@ -24,18 +29,18 @@ export const InfoBlock: React.FC<Props> = ({ className, title, text, imageUrl })
           <Link href="/">
             <Button variant="outline" className="gap-2">
               <ArrowLeft />
-              На главную
+              To the main page
             </Button>
           </Link>
           <a href="">
             <Button variant="outline" className="text-gray-500 border-gray-400 hover:bg-gray-50">
-              Обновить
+              Refresh
             </Button>
           </a>
         </div>
       </div>
 
-      <img src={imageUrl} alt={title} width={300} />
+      <img src={imageUrl} alt={title} className="w-[200px] md:w-[300px]" />
     </div>
   );
 };

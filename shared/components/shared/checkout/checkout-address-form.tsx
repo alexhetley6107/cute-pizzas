@@ -10,14 +10,14 @@ interface Props {
 
 export const CheckoutAddressForm: React.FC<Props> = ({ className }) => {
   return (
-    <WhiteBlock title="3. Адрес доставки" className={className}>
+    <WhiteBlock title="3. Delivery address" className={className}>
       <div className="flex flex-col gap-5">
-        <FormInput name="address" className="text-base" placeholder="Ваш Адрес" />
+        <FormInput name="address" className="text-base" placeholder="Your address" />
 
         <FormTextarea
           name="comment"
           className="text-base"
-          placeholder="Комментарий к заказу"
+          placeholder="Comment to order"
           rows={5}
         />
       </div>

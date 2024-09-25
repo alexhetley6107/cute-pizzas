@@ -1,4 +1,3 @@
-// import { Prisma } from '@prisma/client';
 import { hashSync } from 'bcrypt';
 import { categories, _ingredients, products } from './constants';
 import { prisma } from './prisma-client';
@@ -49,7 +48,7 @@ async function up() {
 
   const pizza1 = await prisma.product.create({
     data: {
-      name: 'Пепперони фреш',
+      name: 'Pepperoni fresh',
       imageUrl: '/images/pizzas/pizza_1.webp',
       categoryId: 1,
       ingredients: {
@@ -60,7 +59,7 @@ async function up() {
 
   const pizza2 = await prisma.product.create({
     data: {
-      name: 'Сырная',
+      name: 'Cheese',
       imageUrl: '/images/pizzas/pizza_2.webp',
       categoryId: 1,
       ingredients: {
@@ -71,7 +70,7 @@ async function up() {
 
   const pizza3 = await prisma.product.create({
     data: {
-      name: 'Чоризо фреш',
+      name: 'Chorizo ​​fresh',
       imageUrl: '/images/pizzas/pizza_3.webp',
       categoryId: 1,
       ingredients: {
