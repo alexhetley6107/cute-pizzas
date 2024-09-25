@@ -1,104 +1,104 @@
 export const categories = [
   {
-    name: 'Пиццы',
+    name: 'Pizzas',
   },
   {
-    name: 'Завтрак',
+    name: 'Breakfast',
   },
   {
-    name: 'Закуски',
+    name: 'Appetizers',
   },
   {
-    name: 'Коктейли',
+    name: 'Cocktails',
   },
   {
-    name: 'Напитки',
+    name: 'Drinks',
   },
 ];
 
 export const _ingredients = [
   {
-    name: 'Сырный бортик',
+    name: 'Cheese border',
     price: 17,
     imageUrl: '/images/ingredients/cheeze_bortik.png',
   },
   {
-    name: 'Сливочная моцарелла',
+    name: 'Creamy mozzarella',
     price: 9,
     imageUrl: '/images/ingredients/slivochnaya_mozzarella.png',
   },
   {
-    name: 'Сыры чеддер и пармезан',
+    name: 'Cheddar and Parmesan cheeses',
     price: 8,
     imageUrl: '/images/ingredients/cheeze_cheddr_and_parmezan.png',
   },
   {
-    name: 'Острый перец халапеньо',
+    name: 'Hot Jalapeno Pepper',
     price: 5,
     imageUrl: '/images/ingredients/ostriy_perets_halapenu.png',
   },
   {
-    name: 'Нежный цыпленок',
+    name: 'Tender Chicken',
     price: 18,
     imageUrl: '/images/ingredients/nezhniy_ciplenok.png',
   },
   {
-    name: 'Шампиньоны',
+    name: 'Champignons',
     price: 16,
     imageUrl: '/images/ingredients/shampinyoni.png',
   },
   {
-    name: 'Ветчина',
+    name: 'Ham',
     price: 23,
     imageUrl: '/images/ingredients/vetchina.png',
   },
   {
-    name: 'Пикантная пепперони',
+    name: 'Spicy pepperoni',
     price: 7,
     imageUrl: '/images/ingredients/pikantnaya_paperoni.png',
   },
   {
-    name: 'Острая чоризо',
+    name: 'Spicy Chorizo',
     price: 8,
     imageUrl: '/images/ingredients/ostraya_chorizo.png',
   },
   {
-    name: 'Маринованные огурчики',
+    name: 'Pickled cucumbers',
     price: 5,
     imageUrl: '/images/ingredients/marinovannie_ogurchiki.png',
   },
   {
-    name: 'Свежие томаты',
+    name: 'Fresh tomatoes',
     price: 9,
     imageUrl: '/images/ingredients/svezhie_tomati.png',
   },
   {
-    name: 'Красный лук',
+    name: 'Red onion',
     price: 11,
     imageUrl: '/images/ingredients/krasniy_luk.png',
   },
   {
-    name: 'Сочные ананасы',
+    name: 'Juicy pineapples',
     price: 20,
     imageUrl: '/images/ingredients/sochnie_ananasi.png',
   },
   {
-    name: 'Итальянские травы',
+    name: 'Italian herbs',
     price: 11,
     imageUrl: '/images/ingredients/italianskie_travi.png',
   },
   {
-    name: 'Сладкий перец',
+    name: 'Sweet pepper',
     price: 12,
     imageUrl: '/images/ingredients/sladkiy_perets.png',
   },
   {
-    name: 'Кубики брынзы',
+    name: 'Feta cheese cubes',
     price: 16,
     imageUrl: '/images/ingredients/kubiki_brinzi.png',
   },
   {
-    name: 'Митболы',
+    name: 'Meatballs',
     price: 32,
     imageUrl: '/images/ingredients/mitboli.png',
   },
@@ -106,87 +106,87 @@ export const _ingredients = [
 
 export const products = [
   {
-    name: 'Омлет с ветчиной и грибами',
+    name: 'Omelette with ham and mushrooms',
     imageUrl: '/images/products/omlet_s_vetchinoy_i_gribami.webp',
     categoryId: 2,
   },
   {
-    name: 'Омлет с пепперони',
+    name: 'Omelette with pepperoni',
     imageUrl: '/images/products/omlet_s_peperoni.webp',
     categoryId: 2,
   },
   {
-    name: 'Кофе Латте',
+    name: 'Coffee Latte',
     imageUrl: '/images/products/kofe_latte.webp',
     categoryId: 2,
   },
   {
-    name: 'Дэнвич ветчина и сыр',
+    name: 'Danwich ham and cheese',
     imageUrl: '/images/products/denvich_vetchina_i_sir.webp',
     categoryId: 3,
   },
   {
-    name: 'Куриные наггетсы',
+    name: 'Chicken Nuggets',
     imageUrl: '/images/products/kurinie_naggetsi.webp',
     categoryId: 3,
   },
   {
-    name: 'Картофель из печи с соусом 🌱',
+    name: 'Oven baked potatoes with sauce 🌱',
     imageUrl: '/images/products/kartofel_iz_pechi_s_sousom.webp',
     categoryId: 3,
   },
   {
-    name: 'Додстер',
+    name: 'Dodster',
     imageUrl: '/images/products/dodster.webp',
     categoryId: 3,
   },
   {
-    name: 'Острый Додстер 🌶️🌶️',
+    name: 'Sharp Dodster 🌶️🌶️',
     imageUrl: '/images/products/ostriy_dodster.webp',
     categoryId: 3,
   },
   {
-    name: 'Банановый молочный коктейль',
+    name: 'Banana Milkshake',
     imageUrl: '/images/products/bananoviy_molochniy_kokteil.webp',
     categoryId: 4,
   },
   {
-    name: 'Карамельное яблоко молочный коктейль',
+    name: 'Caramel Apple Milkshake',
     imageUrl: '/images/products/karamenoe_yabloko_molochniy_kokteil.webp',
     categoryId: 4,
   },
   {
-    name: 'Молочный коктейль с печеньем Орео',
+    name: 'Oreo Cookie Milkshake',
     imageUrl: '/images/products/molochniy_kokteil_s_pecheniem_oreo.webp',
     categoryId: 4,
   },
   {
-    name: 'Классический молочный коктейль 👶',
+    name: 'Classic Milkshake 👶',
     imageUrl: '/images/products/klassicheskiy_molochniy_kokteil.webp',
     categoryId: 4,
   },
   {
-    name: 'Ирландский Капучино',
+    name: 'Irish Cappuccino',
     imageUrl: '/images/products/irlandskiy_kapucino.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Карамельный капучино',
+    name: 'Coffee Caramel Cappuccino',
     imageUrl: '/images/products/kofe_karamelniy_kapuchino.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Кокосовый латте',
+    name: 'Coffee Coconut Latte',
     imageUrl: '/images/products/kofe_kokosoviy_latte.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Американо',
+    name: 'Americano coffee',
     imageUrl: '/images/products/kofe_amerikano.webp',
     categoryId: 5,
   },
   {
-    name: 'Кофе Латте',
+    name: 'Coffee Latte',
     imageUrl: '/images/products/kofe_latte.webp',
     categoryId: 5,
   },

@@ -7,7 +7,6 @@ import {
   SortPopup,
   Title,
 } from '@/shared/components/shared';
-import { prisma } from '@/prisma/prisma-client';
 import { Suspense } from 'react';
 import { findPizzas, GetSearchParams } from '@/shared/lib/find-pizzas';
 import { Stories } from '@/shared/components/shared/stories';
@@ -18,7 +17,7 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
   return (
     <>
       <Container className="mt-4 xl:mt-10 px-4">
-        <Title text="Все пиццы" className="font-extrabold text-[22px] md:text-[36px]" />
+        <Title text="All products" className="font-extrabold text-[22px] md:text-[36px]" />
       </Container>
 
       <div className="sticky z-10 top-0 bg-white py-1 sm:py-5 shadow-lg shadow-black/5">

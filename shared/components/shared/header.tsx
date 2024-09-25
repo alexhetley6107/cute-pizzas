@@ -28,7 +28,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
     let toastMessage = '';
 
     if (searchParams.has('verified')) {
-      toastMessage = 'Почта успешно подтверждена!';
+      toastMessage = 'Email successfully verified!';
     }
 
     if (toastMessage) {
@@ -47,7 +47,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
             <Image src="/logo.png" width={35} height={35} alt="Logo" />
             <div className="hidden md:block">
               <h1 className="text-2xl uppercase font-black">Cute Pizzas</h1>
-              <p className="text-sm text-gray-400 leading-3">вкусней уже некуда</p>
+              <p className="text-sm text-gray-400 leading-3">{"it couldn't be tastier"}</p>
             </div>
           </div>
         </Link>

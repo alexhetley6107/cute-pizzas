@@ -22,7 +22,7 @@ export const FiltersDrawer: React.FC<React.PropsWithChildren> = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className={cn('group relative font-bold')}>Фильтр</Button>
+        <Button className={cn('group relative font-bold')}>Filters</Button>
       </SheetTrigger>
 
       <SheetContent className="flex flex-col justify-between pb-15 bg-[#F4F1EE]">

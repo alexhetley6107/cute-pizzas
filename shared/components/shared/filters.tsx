@@ -29,7 +29,7 @@ export const Filters: React.FC<Props> = ({ className }) => {
 
   return (
     <div className={className}>
-      <Title text="Фильтрация" size="sm" className="mb-5 font-bold" />
+      <Title text="Filtration" size="sm" className="mb-5 font-bold" />
 
       <CheckboxFiltersGroup
         name={'pizzaTypes'}
@@ -38,26 +38,26 @@ export const Filters: React.FC<Props> = ({ className }) => {
         selected={filters.pizzaTypes}
         onClickCheckbox={filters.setPizzaTypes}
         items={[
-          { text: 'Тонкое', value: '1' },
-          { text: 'Традиционное', value: '2' },
+          { text: 'Еhin', value: '1' },
+          { text: 'Traditional', value: '2' },
         ]}
       />
 
       <CheckboxFiltersGroup
         name={'sizes'}
         className="mt-5"
-        title="Размеры"
+        title="Sizes"
         selected={filters.sizes}
         onClickCheckbox={filters.setSizes}
         items={[
-          { text: '20 см', value: '20' },
-          { text: '30 см', value: '30' },
-          { text: '40 см', value: '40' },
+          { text: '20 сm', value: '20' },
+          { text: '30 сm', value: '30' },
+          { text: '40 сm', value: '40' },
         ]}
       />
 
       <div className="mt-5 border-y border-y-neutral-100 py-6 pb-7">
-        <p className="font-bold mb-3">Цена от и до:</p>
+        <p className="font-bold mb-3">Price from and to:</p>
         <div className="flex gap-3 mb-5">
           <Input
             type="number"
@@ -87,7 +87,7 @@ export const Filters: React.FC<Props> = ({ className }) => {
 
       <CheckboxFiltersGroup
         className="mt-5"
-        title="Формат"
+        title="Formats"
         limit={6}
         defaultItems={items.slice(0, 6)}
         items={items}

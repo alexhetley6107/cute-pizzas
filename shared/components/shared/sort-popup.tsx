@@ -19,24 +19,18 @@ export const SortPopup: React.FC<Props> = ({ className }) => {
           )}
         >
           <ArrowUpDown size={16} />
-          <b>Сортировка:</b>
+          <b>Sorting:</b>
 
-          <b className="text-primary">популярное</b>
+          <b className="text-primary">cheap</b>
         </div>
       </PopoverTrigger>
       <PopoverContent className="w-[240px]">
         <ul>
           <li className="hover:bg-secondary hover:text-primary p-2 px-4 cursor-pointer rounded-md">
-            Сначала популярное
+            First the cheap ones
           </li>
           <li className="hover:bg-secondary hover:text-primary p-2 px-4 cursor-pointer rounded-md">
-            Сначала недорогие
-          </li>
-          <li className="hover:bg-secondary hover:text-primary p-2 px-4 cursor-pointer rounded-md">
-            Сначала дорогие
-          </li>
-          <li className="hover:bg-secondary hover:text-primary p-2 px-4 cursor-pointer rounded-md">
-            С лучшей оценкой
+            First the expensive ones
           </li>
         </ul>
       </PopoverContent>
