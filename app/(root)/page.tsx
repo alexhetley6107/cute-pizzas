@@ -23,7 +23,7 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
       <div className="sticky z-10 top-0 bg-white py-1 sm:py-5 shadow-lg shadow-black/5">
         <Container className="flex flex-wrap items-center justify-between gap-2 px-4">
           <Categories items={categories.filter((c) => c.products.length > 0)} />
-          <SortPopup />
+
           <div className="md:hidden block">
             <FiltersDrawer />
           </div>
