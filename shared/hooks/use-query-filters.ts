@@ -11,7 +11,7 @@ export const useQueryFilters = (filters: Filters) => {
     if (isMounted.current) {
       const params = {
         ...filters.prices,
-        sorting: filters.sorting,
+        sortBy: filters.sortBy,
         pizzaTypes: Array.from(filters.pizzaTypes),
         sizes: Array.from(filters.sizes),
         ingredients: Array.from(filters.selectedIngredients),

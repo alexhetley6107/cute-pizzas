@@ -10,11 +10,6 @@ interface Props {
   className?: string;
 }
 
-interface PriceProps {
-  priceFrom?: number;
-  priceTo?: number;
-}
-
 export const Filters: React.FC<Props> = ({ className }) => {
   const filters = useFilters();
   useQueryFilters(filters);
