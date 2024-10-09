@@ -43,12 +43,7 @@ export async function createOrder(data: CheckoutFormValues) {
       throw new Error('Cart not found');
     }
 
-    /* Если корзина пустая возращаем ошибку */
-    if (userCart?.totalAmount === 0) {
-      throw new Error('Cart is empty');
-    }
-
-    /* Создаем заказ */
+    // /* Создаем заказ */
     const order = await prisma.order.create({
       data: {
         token: cartToken,
@@ -62,6 +57,42 @@ export async function createOrder(data: CheckoutFormValues) {
         items: JSON.stringify(userCart.items),
       },
     });
+
+    return order.id;
+  } catch (err) {
+    console.log('[CreateOrder] Server error', err);
+  }
+}
+
+export async function payOrder() {
+  try {
+    const cookieStore = cookies();
+    const cartToken = cookieStore.get('cartToken')?.value;
+
+    /* Находим корзину по токену */
+    const userCart = await prisma.cart.findFirst({
+      include: {
+        user: true,
+        items: {
+          include: {
+            ingredients: true,
+            productItem: {
+              include: {
+                product: true,
+              },
+            },
+          },
+        },
+      },
+      where: {
+        token: cartToken,
+      },
+    });
+
+    /* Если корзина не найдена возращаем ошибку */
+    if (!userCart) {
+      throw new Error('Order not found');
+    }
 
     /* Очищаем корзину */
     await prisma.cart.update({
@@ -78,20 +109,6 @@ export async function createOrder(data: CheckoutFormValues) {
         cartId: userCart.id,
       },
     });
-
-    const paymentUrl = 'http://localhost:3000/';
-
-    await sendEmail(
-      data.email,
-      'Cute Pizzas / Оплатите заказ #' + order.id,
-      PayOrderTemplate({
-        orderId: order.id,
-        totalAmount: order.totalAmount,
-        paymentUrl,
-      })
-    );
-
-    return paymentUrl;
   } catch (err) {
     console.log('[CreateOrder] Server error', err);
   }

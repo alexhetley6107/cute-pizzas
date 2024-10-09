@@ -4,7 +4,6 @@ import {
   Filters,
   FiltersDrawer,
   ProductsGroupList,
-  SortPopup,
   Title,
 } from '@/shared/components/shared';
 import { Suspense } from 'react';
@@ -20,7 +19,7 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
         <Title text="All products" className="font-extrabold text-[22px] md:text-[36px]" />
       </Container>
 
-      <div className="sticky z-10 top-0 bg-white py-1 sm:py-5 shadow-lg shadow-black/5">
+      <div className="sticky z-10 top-0 bg-white py-1 md:py-5 shadow-lg shadow-black/5">
         <Container className="flex flex-wrap items-center justify-between gap-2 px-4">
           <Categories items={categories.filter((c) => c.products.length > 0)} />
 

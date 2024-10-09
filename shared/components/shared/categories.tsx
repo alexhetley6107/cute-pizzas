@@ -20,7 +20,7 @@ export const Categories: React.FC<Props> = ({ className, items }) => {
         <Link
           key={name}
           className={cn(
-            'flex items-center font-bold h-7 sm:h-11 px-3 sm:px-5 rounded-2xl ',
+            'flex items-center font-bold h-7 md:h-11 px-3 md:px-5 rounded-2xl ',
             categoryActiveId === id && 'bg-white shadow-md shadow-gray-200 text-primary'
           )}
           href={`/#${name}`}

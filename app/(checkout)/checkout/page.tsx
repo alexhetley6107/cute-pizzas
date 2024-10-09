@@ -15,8 +15,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { checkoutFormSchema, CheckoutFormValues } from '@/shared/constants';
 import toast from 'react-hot-toast';
 import { createOrder } from '@/app/api/actions';
+import { useRouter } from 'next/navigation';
+import qs from 'qs';
 
 export default function CheckoutPage() {
+  const { push } = useRouter();
   const [submitting, setSubmitting] = React.useState(false);
   const { totalAmount, updateItemQuantity, items, removeCartItem, loading } = useCart();
 
@@ -41,16 +44,17 @@ export default function CheckoutPage() {
     try {
       setSubmitting(true);
 
-      const url = await createOrder(data);
+      const orderId = await createOrder(data);
 
-      console.log({ url });
+      console.log({ orderId });
 
       toast.error('Order successfully placed! 📝 Proceed to payment... ', {
         icon: '✅',
       });
 
-      if (url) {
-        location.href = url;
+      if (orderId) {
+        const query = qs.stringify({ orderId });
+        push(`/payment?${query}`, { scroll: false });
       }
     } catch (err) {
       console.log(err);
