@@ -23,6 +23,8 @@ export const LoginForm: React.FC<Props> = ({ onClose }) => {
 
   const onSubmit = async (data: TFormLoginValues) => {
     try {
+      console.log(data);
+
       const resp = await signIn('credentials', {
         ...data,
         redirect: false,
