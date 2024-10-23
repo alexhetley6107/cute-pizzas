@@ -1,7 +1,6 @@
 export * from './forms';
 export * from './modals';
 export * from './checkout';
-export * from './email-templates';
 export { Header } from './header';
 export { Container } from './container';
 export { Title } from './title';
